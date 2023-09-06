@@ -1,3 +1,4 @@
+import Link from "@/node_modules/next/link";
 import fs from "fs";
 
 const getPostMetadata = () => {
@@ -15,7 +16,9 @@ export default function Home() {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((fileName) => (
     <div key={fileName}>
-      <h2>{fileName}</h2>
+      <Link href={`/posts/${fileName}`}>
+        <h2>{fileName}</h2>
+      </Link>
     </div>
   ));
 
