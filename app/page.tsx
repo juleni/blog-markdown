@@ -7,5 +7,9 @@ export default function Home() {
     <PostPreview key={post.filename} {...post} />
   ));
 
-  return <main>{postPreviews}</main>;
+  return (
+    <main className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      {postPreviews}
+    </main>
+  );
 }
