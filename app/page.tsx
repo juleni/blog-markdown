@@ -1,23 +1,39 @@
 import Link from "@/node_modules/next/link";
 import fs from "fs";
+import matter from "gray-matter";
+import { PostMetadata } from "./components/PostMetadata";
 
-const getPostMetadata = () => {
+const getPostMetadata = (): PostMetadata[] => {
   const folder = "posts/";
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) =>
     file.toLowerCase().endsWith(".md")
   );
-  const fileNames = markdownPosts.map((file) => file.replace(".md", ""));
 
-  return fileNames;
+  //const fileNames = markdownPosts.map((file) => file.replace(".md", ""));
+  // Get gray-matter metadata from each file
+  const posts = markdownPosts.map((fileName) => {
+    const fileContents = fs.readFileSync(`posts/${fileName}`, "utf8");
+    const matterResult = matter(fileContents);
+    return {
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      subtitle: matterResult.data.subtitle,
+      filename: fileName.toLowerCase().replace(".md", ""),
+    };
+  });
+
+  return posts;
 };
 
 export default function Home() {
   const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((fileName) => (
-    <div key={fileName}>
-      <Link href={`/posts/${fileName}`}>
-        <h2>{fileName}</h2>
+  const postPreviews = postMetadata.map((post) => (
+    <div key={post.filename}>
+      <Link href={`/posts/${post.filename}`}>
+        <h2>{post.title}</h2>
+        <p>{post.subtitle}</p>
+        <p>{post.date}</p>
       </Link>
     </div>
   ));
