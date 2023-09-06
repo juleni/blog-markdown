@@ -1,3 +1,4 @@
+import getPostMetadata from "@/app/components/getPostMetadata";
 import fs from "fs";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
@@ -9,6 +10,12 @@ const getPostContent = (postName: string) => {
   const matterResult = matter(content);
 
   return matterResult;
+};
+
+// Generate static page for each markdown file post
+export const generateStaticParams = async () => {
+  const posts = getPostMetadata();
+  return posts.map((post) => ({ postname: post.filename }));
 };
 
 export default function postPage(props: any) {
