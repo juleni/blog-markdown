@@ -23,8 +23,16 @@ export default function postPage(props: any) {
   const post = getPostContent(postName);
   return (
     <div>
-      <h1>Post {post.data.title}</h1>
-      <Markdown>{post.content}</Markdown>
+      <div className="my-12 text-center">
+        <h1 className="text-2xl text-green-700 text-center">
+          Post {post.data.title}
+        </h1>
+        <p className="text-slate-400 text-xs mt-2">{post.data.date}</p>
+      </div>
+
+      <article className="prose lg:prose-xl">
+        <Markdown>{post.content}</Markdown>
+      </article>
     </div>
   );
 }
