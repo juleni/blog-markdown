@@ -17,7 +17,7 @@ export const generateStaticParams = async () => {
   const posts = getPostMetadata();
   if (posts.length > 0) {
     return posts.map((post) => ({ postname: post.filename }));
-  } else return [];
+  } else return undefined;
 };
 
 export default function postPage(props: any) {
