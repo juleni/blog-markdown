@@ -15,9 +15,7 @@ const getPostContent = (postName: string) => {
 // Generate static page for each markdown file post
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
-  if (posts.length > 0) {
-    return posts.map((post) => ({ postname: post.filename }));
-  } else return [] as any[];
+  return posts.map((post) => ({ postname: post.filename }));
 };
 
 export default function postPage(props: any) {
