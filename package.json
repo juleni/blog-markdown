@@ -2,7 +2,6 @@
   "name": "blog-markdown",
   "version": "0.1.0",
   "private": false,
-  "type": "module",
   "homepage": "https://juleni.github.io/blog-markdown/",
   "scripts": {
     "dev": "next dev",
