@@ -23,11 +23,13 @@ export default function postPage(props: any) {
   const post = getPostContent(postName);
   return (
     <div>
-      <div className="my-12 text-center">
-        <h1 className="text-2xl text-green-700 text-center">
-          Post {post.data.title}
+      <div className="my-12">
+        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text text-green-700">
+          {post.data.title}
         </h1>
-        <p className="text-slate-400 text-xs mt-2">{post.data.date}</p>
+        <p className="text-slate-400 text-xs mt-2">
+          Posted on {post.data.date}
+        </p>
       </div>
 
       <article className="prose lg:prose-xl">
