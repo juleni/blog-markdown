@@ -24,6 +24,6 @@ No aj keď už fyzicky nie si so mnou, tvoja prítomnosť zostane žiť v mojom 
 
 Ďakujem ti, Ňufko, za všetko, čo si pre mňa urobil. Za všetky tie krásne chvíle, za všetku lásku a oddanosť. Bol si najlepším malým zvieracím priateľom, akého som si mohol priať, a tvoja prítomnosť mi dala niečo, čomu budem navždy vďačný. Žiješ v mojom srdci a spomienka na naše krásne spoločné chvíle ma bude sprevádzať na mojej ďalšej ceste životom. Nikdy na teba nezabudnem, môj verný priateľu, a vždy ťa budem ľúbiť.
 
-#### Odpočívaj v pokoji milovaný zajačik !
+#### Odpočívaj v pokoji milovaný zajačik :black_heart:
 
-![](../public/images/nufko.jpg)
+![](/images/nufko.jpg)
