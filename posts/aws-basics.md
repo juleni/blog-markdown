@@ -189,4 +189,58 @@ text emails, you can do that with SNS.
   - centralizes activity logs across regions in an S3 bucket
   - tracks only API activity in your AWS account
   - creates a trail of breadcrumbs for any action in your AWS account
--**Tags** - are a key value pair that you can apply to pretty much any cloud resource
+- **Tags** - are a key value pair that you can apply to pretty much any cloud resource
+- **Systems Manager** - another service that helps you organize your AWS resources into groups
+  - you can also group on premises or resources on other cloud platforms for visibility
+  - You can take automated actions on resource groups using Systems Manager Run Command
+  - you can view aggregated operational data of resource groups
+  - there's a feature called Parameter Store (!!!pop up on exam!!!) - which can help you securely store sensitive data like:
+    - passwords
+    - database strings
+    - license keys
+- **Health Dashboard** - monitor the health of the services that are relevant to your AWS account
+- **Auditing** - is a continuous act of monitoring passive configurations for security and best practices
+   - Data Encryption - make sure that your data is encrypted, in transit, and at rest
+   - Secure CloudTrail - make sure your CloudTrail logs are secure and can't be tampered with
+   - Public Access - to check to see if any of your resources have public access that shouldn't have it
+   - Resources Provisioning - make sure that any resources that are provisioned meet a certain set of configuration standards
+   - Network Security - make sure there isn't any unnecessary access
+   - Protect Credentials - make sure that your credentials are appropriately secure
+- **AWS Config** - has sets of predefined recommendations, or create custom rules that it will use to check configurations across AWS account
+- **Audit Manager** - another service used for auditing on AWS
+   - is a place where you can centralize your audit data from Config and other 
+   - can find the root causes of non-compliant resources and build out auditing reports
+   - can provide prebuilt auditing frameworks for a bunch of different compliance and best practice frameworks like:
+     - HIPAA, 
+     - NIST Cybersecurity,
+     - AWS Operational Best Practices frameworks
+- **Amazon Connect** - is a cloud-based contact center allows you to create a call center in the cloud, and this can be a distributed call center with agents and managers and cases tracked all around the globe
+- **Amazon WorkSpaces** - used to provision desktops for dispersed workforces
+   - can create or connect a directory of users and give them access to virtual desktops
+   - used for provisioning secure desktops for remote employees
+- **Amazon AppStream** - it converts applications to Software-as-a-Service, or SaaS, for employees or end users. Is used to host and manage an application in the cloud that can be accessed through a web browser.
+
+##### Chapter 11 - Security, Compliance, and Governance
+- **Shared Responsibility Model** - defines the things that you, as the customer of AWS, are responsible for securing in the cloud and the things that AWS is responsible for securing
+- What the customer's responsibilities are on AWS?
+  - Customer Data - responsibility for:
+  - Retention
+  - Encryption
+  - Backups
+  - Access
+- What the AWS responsibilities?
+  - AWS is responsible for:
+  - security of the cloud
+  - the hardware and software that make up the cloud where you host your workloads
+-  **Principle of Least Privilege** -  this is all about assigning and limiting privileges on AWS, should grant only the permissions needed to complete a task
+- **Granular Permissions** - another aspect of the principle of least privilege, on specific resources are defined by a service called Identity and Access Management (IAM)
+- **Identity and Access Management (IAM)** - can be applied to users that are logging in to your AWS account, 
+  - defines who can enter and what they can do
+  - gives permissions to access certain resources and controls the granular permissions that help you adhere to the principle of least privilege
+- **Permissions** - are defined by IAM Policies
+- **IAM policy** - contains permissions that allow certain entities to take certain actions in AWS
+- **Root User** - is the user that creates AWS account, it's the only user that can destroy AWS account, one way you can secure the root user or any user in AWS, is by using multi-factor authentication (MFA)
+- **IAM user** - by default, an IAM user doesn't have access to any resources or actions on your AWS account, only by creating an IAM policy and attaching it to that user can they then access the specific resources listed in that IAM policy
+- **IAM Role** - can be assumed by any resource on AWS and grant access to other resources
+- **IAM Access Analyzer** - identifies and alerts you to resources with external access allowed to them
+- **IAM Policy Simulator** - allows you to take a policy that you've recently written or customized and test it yourself before applying it to users, groups, or roles. 
