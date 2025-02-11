@@ -1,4 +1,190 @@
 ### Cloud Guru - AWS CLF-C02
+
+##### Chapter 2 - Foundations of Cloud Computing
+
+- **Cloud** - is a real actual place and can be servers located anywhere in the world that are in your data center or someone else's
+- **Servers** - are very powerful computers that handle all of your requests
+- **AWS** - has thousands of servers across the globe in groups called data centers
+          - maximizes use of their servers with virtualization
+- **virtual machine (VM)** - server that's divided into small units, using that VM comes with a price
+                           - it has its own operating system, memory, storage, networking access, and it's yours to use
+- **on-demand usage** - requires no upfront payments or long-term commitments 
+- **pay as you go** - pays by the hour or sometimes by the second for what you use
+
+- **Cloud computing** - delivery of computing services over the internet
+                      - instead of using your own internal data center or local machine to store data or share applications, you're using AWS's servers in their data centers
+- Example services:
+  - compute services like EC2,
+  - storage services like S3,
+  - networking services like VPC,
+  - database services like RDS,
+  - developer tools like the Code Family,
+  - migration services like Migration Hub,
+  - machine learning services like Rekognition,
+  - auditing services like Trusted Advisor,
+  - security services like IAM
+  - pricing services like the Pricing Calculator
+
+- **Capital Expenditures (CapEx)** - are upfront purchases towards your fixed assets like equipment, property, computers, and software
+- **Operating Expenses (OpEx)** - are funds used to run day-to-day operations 
+                                - include things like employee salaries, marketing, rent, and research and development
+
+- **Six advantages of cloud computing:**
+  - **1. Global in Minutes** - deploy applications around the world at a click of a button, launch whole environments in minutes
+  - **2. No Data Centre Spend** - focus on building applications instead of managing hardware as you do not own the data center being used
+  - **3. Economies on Scale** - volume discounts are passed on to you, which provides lower pay as you go prices
+  - **4. Speed and Agility** - provided services allow you to innovate more quickly and deliver your applications faster as well
+  - **5. Stop Guessing Capacity** - because the cloud is elastic, your capacity is matched exactly to your demand, and finally, you pay for what you use instead of making huge upfront investments by running a data center
+  - **6. CapEx for Variable Expense**
+
+- _Advantages and Benefits:_
+  - **high availabilit**y - systems are designed to operate continuously without failure for a long time. These systems avoid loss of service by reducing or managing failures
+  - **elasticity** - you don't have to plan ahead of time how much capacity you need, which is a huge time saver and cost saver. You can provision only what you need and then grow and shrink based on demand.
+  - **agility** - all the services you have access to help you to innovate faster, giving you faster speed to market
+  - **durability** - is all about long-term data protection. This means your data will remain intact without corruption.
+
+- _Cloud Computing Models:_
+  - **Infrastructure as a Service (IaaS)** - building blocks that can be rented and you can choose how to put them together
+    - Example: Having a monthly subscription with a hosting company that serves your website
+  - **Software as a Service (SaaS)** - is using a complete application on demand that someone offers to users
+    - Example: Your personal email that you access through a web browser
+  - **Platform as a Service (PaaS)** - is used by developers to help develop software using web-based tools without worrying about the underlying infrastructure
+    - Example: Tools provided to build a storefront application that runs on another company's server
+
+- _Cloud Deployment Models:_
+  - **Private Cloud** - means that resources like servers and databases are all on premises
+                      - local network or private cloud is internal data center
+                      - has none of the cloud advantages we talked about, but it does offer more security of  data as it is not traversing any public space and isn't shared with other organizations with virtualization
+  - **Public Cloud** -  AWS, Azure, and GCP
+                     -  you do not have any hardware responsibility as they provide all the hardware that provides the services you use
+                     - this option has all of the advantages of the cloud, like going global in minutes, no huge investments upfront, etc.
+  - **Hybrid Cloud Model** - brings private and public together
+                           - typically have their sensitive data stored locally and securely connect to the public cloud or AWS using services like VPN and Direct Connect
+                          - VPNs can create a secure connection into the public cloud for, say, creating new resources in AWS
+                          - Direct Connect creates a secure connection for data to move from the public cloud to the private cloud without traversing the public internet
+
+- **AWS region** - is a physical location
+                 - AWS groups their regions by geographic locations and can include several regions within each location
+                 - regions are fully independent and isolated, meaning that if one region is impacted by, let's say, an earthquake, the others will not be
+                 - they are resource and service specific, meaning that they are isolated and resources are not automatically replicated across them
+                 - you would need to replicate any resource in each region
+                 - consist of multiple availability zones
+- **Availability zones (AZ)** - consist of one or more physically separated data centers
+                              - no specific documentation saying anything as to how many data centers each AZ has
+                              - one or more discrete data centers with redundant power, networking and connectivity in an AWS region
+                              - they're all housed separately
+                              - have their own power sources
+                              - they're each connected through low latency links
+- _AZ characteristics:_
+  - **fault tolerant** - meaning that if one AZ goes out of service, the others should not be impacted
+  - **high availability**
+
+- **Latenc**y - the amount of time it takes for a website to load, meaning the amount of time between a user's request and the resulting response
+  - **Low latency** - is a good thing because it means your users are seeing your website faster
+
+- **Local Zones** - place AWS services like compute, storage, database, and other services closer to end-users
+                  - allows for any demanding applications that require millisecond latencies
+                  - are extensions of AWS Regions and provide high bandwidth and secure connections between local workloads and those running in the actual Region
+
+- **Edge Locations** - help to reduce latency (can cut latency down by caching data already viewed)
+                     - they aren't used to launch resources, but instead will cache content for faster delivery to users
+                     - are a feature **provided by the CloudFront service**
+                     -**there are more Edge Locations than Regions and AZs**
+                     - **uses the AWS backbone network**, and that topic will be covered in the same content delivery and networking section
+
+- **Cloud Adoption Framework** - focuses on using AWS to digitally transform, and accelerate business outcomes
+  - _Perspectives and Foundational Capabilities_ - here are 6 of these
+    - 1. Security: focuses on compliance and assurance,
+                   Security - governance,
+                            - security assurance
+                            - application security
+                   Protection - infrastructure
+                              - data protection 
+                   Management - Identity and Access Vulnerability
+                   Incident Response
+                   Threat Detection
+    - 2. Business: focuses on strategy and outcomes 
+                   Management - strategy
+                              - portfolio
+                              - innovation 
+                              - product
+                              - data monetization
+                              - data science
+                   Business Insight
+    - 3. Platform: focuses on infrastructure and applications
+                   Architecture and Engineering - platform, data
+                   CI/CD
+                   Modern Application Development
+                   Provisioning and Orchestration
+    - 4. Operations: focuses on successful workload delivery
+                   Management - event 
+                              - incidents and problem
+                              - change and release
+                              - performance and capacity
+                              - configuration 
+                              - patch
+                              - availability and continuity
+                              - application
+                   Observability
+    - 5. Governance: focuses on minimizing transformation-related risks
+                   Management - program and project benefits
+                              - risk
+                              - cloud financial
+                              - application portfolio
+                              - governance
+                              - curation
+    - 6. People: focuses on creating a bridge between technology and business
+                   Transformation - leadership
+                                  - workforce
+                   Organization - design
+                                - alignment
+                   Cloud Fluency
+                   Change Acceleration
+                   Culture Evolution
+
+- _Cloud Adoption Framework_ - has 4 domains
+  1. Technology - focuses on using the cloud to migrate and modernize legacy infrastructure applications as well as data and analytics platforms
+  2. Process - focuses on digitizing, automating, and optimizing business operations
+  3. Organization - focuses on reimagining how the business and teams orchestrate their efforts to create more value, and meet goals
+  4. Product - focuses on reimagining your business model by creating new products or services, and revenue models
+
+- _Cloud Transformation Journey Phases_ - has 4 phases
+  1. Envision - focuses on demonstrating how to use the cloud to accelerate business outcomes
+  2. Align - focuses on identifying capability gaps across the six perspectives we covered
+  3. Launch - focuses on delivering our pilot transformations, and demonstrating their value
+  4. Scale - focuses on expanding those transformations across our environment and scaling them out to meet our requirements and goals
+
+- _Well-Architected Framework_ - has 6 pillars
+  1. Security - (CloudTrail to log all actions) focuses on the protection of data systems and any assets used by your workload
+  2. Cost optimization - (S3 Intelligent Tiering to automatically move data) focuses on the ongoing process of maintaining cost in the cloud
+  3. Performance efficiency - (Lambda to run code with zero administration) focuses on the ability to use computing resources efficiently to meet requirements
+  4. Operational excellence - (CodeCommit for code and template version control) focuses on creating applications that successfully support your workload
+  5. Reliability - (Multi-AZ deployment of RDS databases) focuses on architecting a workload to be consistent, and able to recover quickly
+  6. Sustainability - (EC2 Auto Scaling to ensure max utilisation) focuses on environmental impacts, like energy efficiency and consumption
+
+- _General Design Principles_ - has 6
+  1. Stop guessing your capacity needs (Auto scaling can help with this)
+  2. Test systems at production scale (create a complete testing environment to simulate your actual workload)
+  3. Consider evolutionary architectures (includes the ability to adopt new offerings as capabilities change)
+  4. Automate with architectural experimentation in mind (save time and money while implementing a faster way to create and replicate your workloads)
+  5. Drive architectures using data (reiteration about collecting data)
+  6. Improve through game days (help to simulate events so that your team can be ready
+for the real deal)
+
+- **Management console** - accessible through browser and allows  to access AWS account and resources
+                         - is user-friendly and makes it easy to search for and find services
+                         - could be using the console to create, modify or terminate resources
+- **Root user** - initially created when you set up your AWS account
+                - it is the only user that can completely delete the account and all of the resources within that account
+                - imperative to keep this treasured user protected and ensure that it's not being used to log into the AWS account for day-to-day tasks
+                - first steps should be to enable multi-factor authentication on your root user and create a new user or group to use for your day-to-day tasks in the IAM 
+
+- **Command Line Interface (CLI)** - allows to access account and resources through a terminal or command window
+                                   - mainly used by developers, engineers and resources because you're using commands that trigger APIs through your terminal
+                                   - gives programmatic access, meaning access to AWS resources through an application or a tool
+                                   - uses a terminal session to access resources programmatically
+- Software development kit (SDK) - can access resources, using programming languages like Java, Python, C# and more
+
 ##### Chapter 3 - Compute Technology and 
 
 - **Outpost** - allows to run cloud services in internal data centre (on-premises)
