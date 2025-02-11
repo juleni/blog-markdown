@@ -27,15 +27,15 @@
 
 - **Capital Expenditures (CapEx)** - are upfront purchases towards your fixed assets like equipment, property, computers, and software
 - **Operating Expenses (OpEx)** - are funds used to run day-to-day operations 
-                                - include things like employee salaries, marketing, rent, and research and development
+  - include things like employee salaries, marketing, rent, and research and development
 
 - **Six advantages of cloud computing:**
-  - **1. Global in Minutes** - deploy applications around the world at a click of a button, launch whole environments in minutes
-  - **2. No Data Centre Spend** - focus on building applications instead of managing hardware as you do not own the data center being used
-  - **3. Economies on Scale** - volume discounts are passed on to you, which provides lower pay as you go prices
-  - **4. Speed and Agility** - provided services allow you to innovate more quickly and deliver your applications faster as well
-  - **5. Stop Guessing Capacity** - because the cloud is elastic, your capacity is matched exactly to your demand, and finally, you pay for what you use instead of making huge upfront investments by running a data center
-  - **6. CapEx for Variable Expense**
+  **1. Global in Minutes** - deploy applications around the world at a click of a button, launch whole environments in minutes
+  **2. No Data Centre Spend** - focus on building applications instead of managing hardware as you do not own the data center being used
+  **3. Economies on Scale** - volume discounts are passed on to you, which provides lower pay as you go prices
+  **4. Speed and Agility** - provided services allow you to innovate more quickly and deliver your applications faster as well
+  **5. Stop Guessing Capacity** - because the cloud is elastic, your capacity is matched exactly to your demand, and finally, you pay for what you use instead of making huge upfront investments by running a data center
+  **6. CapEx for Variable Expense**
 
 - _Advantages and Benefits:_
   - **high availabilit**y - systems are designed to operate continuously without failure for a long time. These systems avoid loss of service by reducing or managing failures
@@ -53,27 +53,27 @@
 
 - _Cloud Deployment Models:_
   - **Private Cloud** - means that resources like servers and databases are all on premises
-                      - local network or private cloud is internal data center
-                      - has none of the cloud advantages we talked about, but it does offer more security of  data as it is not traversing any public space and isn't shared with other organizations with virtualization
+    - local network or private cloud is internal data center
+    - has none of the cloud advantages we talked about, but it does offer more security of  data as it is not traversing any public space and isn't shared with other organizations with virtualization
   - **Public Cloud** -  AWS, Azure, and GCP
-                     -  you do not have any hardware responsibility as they provide all the hardware that provides the services you use
-                     - this option has all of the advantages of the cloud, like going global in minutes, no huge investments upfront, etc.
+    - you do not have any hardware responsibility as they provide all the hardware that provides the services you use
+    - this option has all of the advantages of the cloud, like going global in minutes, no huge investments upfront, etc.
   - **Hybrid Cloud Model** - brings private and public together
-                           - typically have their sensitive data stored locally and securely connect to the public cloud or AWS using services like VPN and Direct Connect
-                          - VPNs can create a secure connection into the public cloud for, say, creating new resources in AWS
-                          - Direct Connect creates a secure connection for data to move from the public cloud to the private cloud without traversing the public internet
+    - typically have their sensitive data stored locally and securely connect to the public cloud or AWS using services like VPN and Direct Connect
+    - VPNs can create a secure connection into the public cloud for, say, creating new resources in AWS
+    - Direct Connect creates a secure connection for data to move from the public cloud to the private cloud without traversing the public internet
 
 - **AWS region** - is a physical location
-                 - AWS groups their regions by geographic locations and can include several regions within each location
-                 - regions are fully independent and isolated, meaning that if one region is impacted by, let's say, an earthquake, the others will not be
-                 - they are resource and service specific, meaning that they are isolated and resources are not automatically replicated across them
-                 - you would need to replicate any resource in each region
-                 - consist of multiple availability zones
+  - AWS groups their regions by geographic locations and can include several regions within each location
+  - regions are fully independent and isolated, meaning that if one region is impacted by, let's say, an earthquake, the others will not be
+  - they are resource and service specific, meaning that they are isolated and resources are not automatically replicated across them
+  - you would need to replicate any resource in each region
+  - consist of multiple availability zones
 - **Availability zones (AZ)** - consist of one or more physically separated data centers
-                              - no specific documentation saying anything as to how many data centers each AZ has
-                              - one or more discrete data centers with redundant power, networking and connectivity in an AWS region
-                              - they're all housed separately
-                              - have their own power sources
+  - no specific documentation saying anything as to how many data centers each AZ has
+  - one or more discrete data centers with redundant power, networking and connectivity in an AWS region
+  - they're all housed separately
+  - have their own power sources
                               - they're each connected through low latency links
 - _AZ characteristics:_
   - **fault tolerant** - meaning that if one AZ goes out of service, the others should not be impacted
@@ -83,64 +83,64 @@
   - **Low latency** - is a good thing because it means your users are seeing your website faster
 
 - **Local Zones** - place AWS services like compute, storage, database, and other services closer to end-users
-                  - allows for any demanding applications that require millisecond latencies
-                  - are extensions of AWS Regions and provide high bandwidth and secure connections between local workloads and those running in the actual Region
+  - allows for any demanding applications that require millisecond latencies
+  - are extensions of AWS Regions and provide high bandwidth and secure connections between local workloads and those running in the actual Region
 
 - **Edge Locations** - help to reduce latency (can cut latency down by caching data already viewed)
-                     - they aren't used to launch resources, but instead will cache content for faster delivery to users
-                     - are a feature **provided by the CloudFront service**
-                     -**there are more Edge Locations than Regions and AZs**
-                     - **uses the AWS backbone network**, and that topic will be covered in the same content delivery and networking section
+  - they aren't used to launch resources, but instead will cache content for faster delivery to users
+  - are a feature _provided by the CloudFront service_
+  - _there are more Edge Locations than Regions and AZs_
+  - _uses the AWS backbone network_, and that topic will be covered in the same content delivery and networking section
 
 - **Cloud Adoption Framework** - focuses on using AWS to digitally transform, and accelerate business outcomes
   - _Perspectives and Foundational Capabilities_ - here are 6 of these
-    - 1. Security: focuses on compliance and assurance,
-                   Security - governance,
-                            - security assurance
-                            - application security
-                   Protection - infrastructure
-                              - data protection 
-                   Management - Identity and Access Vulnerability
-                   Incident Response
-                   Threat Detection
-    - 2. Business: focuses on strategy and outcomes 
-                   Management - strategy
-                              - portfolio
-                              - innovation 
-                              - product
-                              - data monetization
-                              - data science
-                   Business Insight
-    - 3. Platform: focuses on infrastructure and applications
-                   Architecture and Engineering - platform, data
-                   CI/CD
-                   Modern Application Development
-                   Provisioning and Orchestration
-    - 4. Operations: focuses on successful workload delivery
-                   Management - event 
-                              - incidents and problem
-                              - change and release
-                              - performance and capacity
-                              - configuration 
-                              - patch
-                              - availability and continuity
-                              - application
-                   Observability
-    - 5. Governance: focuses on minimizing transformation-related risks
-                   Management - program and project benefits
-                              - risk
-                              - cloud financial
-                              - application portfolio
-                              - governance
-                              - curation
-    - 6. People: focuses on creating a bridge between technology and business
-                   Transformation - leadership
-                                  - workforce
-                   Organization - design
-                                - alignment
-                   Cloud Fluency
-                   Change Acceleration
-                   Culture Evolution
+    1. Security: focuses on compliance and assurance,
+      - Security - governance,
+         - security assurance
+         - application security
+      - Protection - infrastructure
+         - data protection 
+      - Management - Identity and Access Vulnerability
+      - Incident Response
+      - Threat Detection
+    2. Business: focuses on strategy and outcomes 
+      - Management - strategy
+         - portfolio
+         - innovation 
+         - product
+         - data monetization
+         - data science
+       - Business Insight
+    3. Platform: focuses on infrastructure and applications
+       - Architecture and Engineering - platform, data
+       - CI/CD
+       - Modern Application Development
+       - Provisioning and Orchestration
+    4. Operations: focuses on successful workload delivery
+       - Management - event 
+          - incidents and problem
+          - change and release
+          - performance and capacity
+          - configuration 
+          - patch
+          - availability and continuity
+          - application
+       - Observability
+    5. Governance: focuses on minimizing transformation-related risks
+       - Management - program and project benefits
+          - risk
+          - cloud financial
+          - application portfolio
+          - governance
+          - curation
+    6. People: focuses on creating a bridge between technology and business
+       - Transformation - leadership
+          - workforce
+       - Organization - design
+          - alignment
+       - Cloud Fluency
+       - Change Acceleration
+       - Culture Evolution
 
 - _Cloud Adoption Framework_ - has 4 domains
   1. Technology - focuses on using the cloud to migrate and modernize legacy infrastructure applications as well as data and analytics platforms
@@ -172,18 +172,18 @@
 for the real deal)
 
 - **Management console** - accessible through browser and allows  to access AWS account and resources
-                         - is user-friendly and makes it easy to search for and find services
-                         - could be using the console to create, modify or terminate resources
+  - is user-friendly and makes it easy to search for and find services
+  - could be using the console to create, modify or terminate resources
 - **Root user** - initially created when you set up your AWS account
-                - it is the only user that can completely delete the account and all of the resources within that account
-                - imperative to keep this treasured user protected and ensure that it's not being used to log into the AWS account for day-to-day tasks
-                - first steps should be to enable multi-factor authentication on your root user and create a new user or group to use for your day-to-day tasks in the IAM 
+  - it is the only user that can completely delete the account and all of the resources within that account
+  - imperative to keep this treasured user protected and ensure that it's not being used to log into the AWS account for day-to-day tasks
+  - first steps should be to enable multi-factor authentication on your root user and create a new user or group to use for your day-to-day tasks in the IAM 
 
 - **Command Line Interface (CLI)** - allows to access account and resources through a terminal or command window
-                                   - mainly used by developers, engineers and resources because you're using commands that trigger APIs through your terminal
-                                   - gives programmatic access, meaning access to AWS resources through an application or a tool
-                                   - uses a terminal session to access resources programmatically
-- Software development kit (SDK) - can access resources, using programming languages like Java, Python, C# and more
+  - mainly used by developers, engineers and resources because you're using commands that trigger APIs through your terminal
+  - gives programmatic access, meaning access to AWS resources through an application or a tool
+  - uses a terminal session to access resources programmatically
+- **Software development kit (SDK)** - can access resources, using programming languages like Java, Python, C# and more
 
 ##### Chapter 3 - Compute Technology and 
 
